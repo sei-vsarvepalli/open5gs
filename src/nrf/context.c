@@ -34,7 +34,7 @@ void nrf_context_init(void)
     ogs_assert(context_initialized == 0);
 
     /* Initialize NRF context */
-    memset(&self, 0, sizeof(nrf_context_t));
+    memset(&self, 0, sizeof(nrf_context_t - 1));
 
     ogs_log_install_domain(&__nrf_log_domain, "nrf", ogs_core()->log.level);
 
